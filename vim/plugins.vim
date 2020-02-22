@@ -52,6 +52,7 @@ Plugin 'altercation/vim-colors-solarized'
 " bar. IT does require modified fonts to use though, so you'll need have pretty
 " full controll of the system you're on to use this one.
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Setuping powerline fonts for airline.
 let g:airline_powerline_fonts = 1

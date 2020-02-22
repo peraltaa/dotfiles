@@ -50,9 +50,14 @@ alias cel='cd /www/sites/celerity/wwwroot/src/celerity-app'
 alias ml='cd ~/Documents/Classes/Spring_2017/'
 alias kk='cd ~/Documents/Work/Kup\ King/King\ Kup/'
 alias ss='cd ~/Documents/Work/SkyFlix/'
-alias mm='cd /Users/mac/Documents/Mr.\ Market\ App/Mr.\ Market/'
+alias mm='cd /Users/mac/Documents/Mr.Market'
 alias insero='cd ~/Documents/Insero/scripts' 
 alias DD='rm -rf ~/Library/Developer/Xcode/DerivedData' 
+alias freedom='cd ~/Documents/Work/Thanurus/Securties' 
+alias dev='cd ~/dev' 
+alias repos='cd ~/Documents/dev/repos' 
+alias gc='sh ~/dev/scripts/quickClone.sh' 
+alias vscode='open -a Visual\ Studio\ Code' 
 
 # Quick compile for java
 alias qcjava='javac *.java'
@@ -69,5 +74,6 @@ export PATH="/Users/mac/anaconda3/bin:$PATH"
 # MacPorts Installer addition on 2017-12-05_at_18:24:49: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
-
-export PATH=/usr/local/bin:$PATH
+export GOPATH="${HOME}/go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
