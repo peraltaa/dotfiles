@@ -24,7 +24,8 @@
 "
 " Sections:
 "    -> General
-"    -> Vundle  
+"    -> Vim-Plug  
+"    -> YouCompleteMe  
 "    -> VIM user interface
 "    -> Colors and Fonts
 "    -> Files and backups
@@ -70,26 +71,67 @@ nmap <leader>w :w!<cr>
 au FocusLost * :wa
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle 
+" => Vim-Plug 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 
-" Vundle needs filetpye plugins off 
+" Vim-Plug needs filetpye plugins off 
 " in order to run properly
 filetype plugin indent off
 syntax off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+call plug#begin('~/.vim/plugged')
 
-" Load plugins from Vundle
+" Load plugins from Vim-Plug
 source ~/.vim/plugins.vim
 
-call vundle#end()
+call plug#end()
 
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
 syntax on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" let g:ycm_language_server = 
+"   \ [ 
+"   \   {
+"   \     'name': 'yaml',
+"   \     'cmdline': [ '/path/to/yaml/server/yaml-language-server', '--stdio' ],
+"   \     'filetypes': [ 'yaml' ]
+"   \   },
+"   \   {
+"   \     'name': 'rust',
+"   \     'cmdline': [ 'ra_lsp_server' ],
+  " \     'filetypes': [ 'rust' ],
+  " \     'project_root_files': [ 'Cargo.toml' ]
+  " \   }
+  " \ ]
+
+   let g:ycm_language_server = 
+   \ [ 
+   \   {
+   \     'name': 'swift',
+   \     'cmdline': [ '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp'],
+   \     'filetypes': [ 'swift' ]
+   \   },
+   \ ]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-LSP 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:lsp_log_verbose = 1
+
+" if executable('sourcekit-lsp')
+"     au User lsp_setup call lsp#register_server({
+"         \ 'name': '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp',
+"         \ 'cmd': {server_info->['xcrun', 'sourcekit-lsp']},
+"         \ 'whitelist': ['swift'],
+"         \ })
+" endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface

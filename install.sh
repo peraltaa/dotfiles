@@ -7,12 +7,13 @@ echo 'Installing dotfiles from '$BASEDIR
 
 cp vim/.vimrc $HOME/.vimrc
 cp ./vim/plugins.vim $HOME/.vim/plugins.vim
-cp -r tmux/ $HOME/.tmux/
+cp tmux/dev.tmux.conf $HOME/.tmux/
+cp tmux/.tmux.conf $HOME/
 cp -r bash/ $HOME/
 
 # source $HOME/.vimrc
 source $HOME/.tmux/dev.tmux.conf
-source $HOME/.tmux/.tmux.conf
+source $HOME/.tmux.conf
 source $HOME/.bash_profile
 
 echo 'Done.'
