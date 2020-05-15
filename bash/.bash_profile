@@ -15,6 +15,10 @@ export PATH
 
 #export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
+# Load my custom env vars for this machine... initial used for repos alias
+
+source ~/.myvars
+
 # Add color to terminal
 export TERM="xterm-color"
 export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
@@ -58,7 +62,7 @@ alias insero='cd ~/Documents/Insero/scripts'
 alias DD='rm -rf ~/Library/Developer/Xcode/DerivedData' 
 alias freedom='cd ~/Documents/Work/Thanurus/Securties' 
 alias dev='cd ~/dev' 
-alias repos='cd ~/Documents/dev/repos' 
+alias repos="cd $REPOS" 
 alias gc='sh ~/dev/scripts/quickClone.sh' 
 alias vscode='open -a Visual\ Studio\ Code' 
 
