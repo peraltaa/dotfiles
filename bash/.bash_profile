@@ -40,6 +40,9 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
+# vi bindings for terminal
+set -o vi
+
 # a quick access to instagram folder
 alias insta='cd ~/Documents/Work/Instagram/scripts'
 alias class='cd ~/Documents/Classes/Fall_2016'
