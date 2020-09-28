@@ -2,7 +2,7 @@
 
 baseInstallDir=/tmp/com.xvim2.install
 signingCert="XCodeSigner"
-branch="xcode11.2"
+branch="master"
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 BLUE='\033[0;34m'
@@ -23,7 +23,7 @@ cloneRepo() {
     git clone -q https://github.com/XVimProject/XVim2.git $baseInstallDir
 
     echo "${GREEN}Checkout out branch ${branch}..."
-    cd $baseInstallDir; git checkout -q $branch
+    cd $baseInstallDir; git checkout -q $branch; git pull
 }
 
 installXVim2() {
