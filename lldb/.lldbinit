@@ -1,0 +1,4 @@
+command alias objc expression -l objc -o --
+command alias swift expression -l Swift -o --
+command alias set-lang-objc settings set target.language objective-c
+command alias set-lang-swift settings set target.language Swift
