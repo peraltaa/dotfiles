@@ -24,6 +24,8 @@ PATH="~/.emacs.d/bin:${PATH}"
 
 export PATH=$PATH:~/.roswell/bin
 
+export PATH="/Users/Angel/.qlot/bin:$PATH"
+
 # Load my custom env vars for this machine... initial used for repos alias
 
 source ~/.myvars
