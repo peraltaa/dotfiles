@@ -4,17 +4,23 @@
 BASEDIR=$(dirname "$0")
 echo 'Installing dotfiles from '$BASEDIR
 # cd $1
+function ln-sr() {
+   # FIXME: should check if symlink exists if not print warning and then attempt to link
+   find $1 -type f -exec ln -s {} $2 \;
+}
 
-cp vim/.vimrc $HOME/.vimrc
-cp ./vim/plugins.vim $HOME/.vim/plugins.vim
-cp tmux/dev.tmux.conf $HOME/.tmux/
-cp tmux/.tmux.conf $HOME/
-cp -r bash/ $HOME/
-cp -r zsh/ $HOME/
+ln -s $(PWD)/vim/.vimrc $HOME/.vimrc
+ln -s $(PWD)/vim/plugins.vim $HOME/.vim/plugins.vim
+ln -s $(PWD)/tmux/dev.tmux.conf $HOME/.tmux/
+ln -s $(PWD)/tmux/.tmux.conf $HOME/
+ln-sr $(PWD)/bash/ $HOME/
+ln-sr $(PWD)/zsh/ $HOME/
+ln-sr $(PWD)/doom/ $HOME/.doom.d
+ln-sr $(PWD)/lldb/ $HOME/
 
 # source $HOME/.vimrc
-source $HOME/.tmux/dev.tmux.conf
-source $HOME/.tmux.conf
+# source $HOME/.tmux/dev.tmux.conf
+# source $HOME/.tmux.conf
 source $HOME/.bash_profile
 source $HOME/.zshrc
 
