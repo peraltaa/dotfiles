@@ -56,6 +56,9 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
+# git 
+autoload -Uz compinit && compinit
+
 # quick list 
 alias pls='ls ..'
 
