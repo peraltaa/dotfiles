@@ -23,6 +23,8 @@ export PATH
 PATH="~/.emacs.d/bin:${PATH}"
 
 export PATH=$PATH:~/.roswell/bin
+export PATH=$PATH:/usr/local/opt/emacs-mac/bin
+export PATH="$HOME/.config/emacs/bin:${PATH}"
 
 export PATH="/Users/Angel/.qlot/bin:$PATH"
 
