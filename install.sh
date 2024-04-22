@@ -9,6 +9,7 @@ function ln-sr() {
    find $1 -type f -exec ln -s {} $2 \;
 }
 
+ln -s $(PWD)/lem/.lemrc $HOME/.lemrc
 ln -s $(PWD)/vim/.vimrc $HOME/.vimrc
 ln -s $(PWD)/vim/plugins.vim $HOME/.vim/plugins.vim
 ln -s $(PWD)/tmux/dev.tmux.conf $HOME/.tmux/
