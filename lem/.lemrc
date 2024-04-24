@@ -29,7 +29,7 @@
 
 (setf *scroll-recenter-p* t)
 ;; (setf (variable-value 'truncate-lines                :global) nil)
-;; (setf (variable-value 'lem.line-numbers:line-numbers :global) nil)
+(setf (variable-value 'lem/line-numbers:line-numbers :global) t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Init Modes 
@@ -50,10 +50,12 @@
 
 ;; General
 (define-key lem:*global-keymap* "Space f f" 'lem:find-file)
-(define-key lem:*global-keymap* "Space b b" 'lem:switch-to-buffer)
+(define-key lem:*global-keymap* "Space b b" 'lem:select-buffer)
 
 ;; VI
-;; (define-key lem-vi-mode:*command-keymap* "q"  'quit-window)
+(define-key lem-vi-mode:*normal-keymap* "q"  'quit-active-window)
+(define-key lem-vi-mode:*normal-keymap* "Space f f" 'lem:find-file)
+(define-key lem-vi-mode:*normal-keymap* "Space b b" 'lem:select-buffer)
 ;; (define-key lem-vi-mode:*insert-keymap* "C-n" 'lem/abbrev:abbrev-with-pop-up-window)
 ;; (define-key lem-vi-mode:*insert-keymap* "j k" 'lem-vi-mode/commands:vi-end-insert)
 
