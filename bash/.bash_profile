@@ -17,7 +17,7 @@ export PATH
 
 # Load my custom env vars for this machine... initial used for repos alias
 
-source ~/.myvars
+source ~/.myvars.sh
 
 # Add color to terminal
 export TERM="xterm-color"
