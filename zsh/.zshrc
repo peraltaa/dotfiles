@@ -26,11 +26,11 @@ export PATH=$PATH:~/.roswell/bin
 
 # Load my custom env vars for this machine... initial used for repos alias
 
-source ~/.myvars
+source ~/.myvars.sh
 
 # Add color to terminal
 export TERM="xterm-color"
-PROMPT='%(?.%F{green}√.%F{red}?%?)%f %F{yellow}%n%F{reset}@%F{green}%m:%F{blue}%~%f%b$ '
+PROMPT='%(?.%F{green}✓.%F{red}?%?)%f %F{yellow}%n%F{reset}@%F{green}%m:%F{blue}%~%f%b$ '
 # export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
 alias ls='ls -G'
 #alias vim='/usr/local/bin/vim'
@@ -53,6 +53,9 @@ alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
+
+# git 
+autoload -Uz compinit && compinit
 
 # quick list 
 alias pls='ls ..'
