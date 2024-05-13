@@ -101,10 +101,9 @@
 (define-key lem-vi-mode:*motion-keymap* "Space w l" 'lem:window-move-right)
 (define-key lem-vi-mode:*motion-keymap* "Space w k" 'lem:window-move-up)
 (define-key lem-vi-mode:*motion-keymap* "Space w j" 'lem:window-move-down)
+(define-key lem-vi-mode:*motion-keymap* "Space w c" 'lem:delete-active-window)
 (define-key lem-vi-mode:*motion-keymap* "Space w s" 'lem:split-active-window-vertically)
 (define-key lem-vi-mode:*motion-keymap* "Space w v" 'lem:split-active-window-horizontally)
-;; (define-key lem-vi-mode:*insert-keymap* "C-n" 'lem/abbrev:abbrev-with-pop-up-window)
-;; (define-key lem-vi-mode:*insert-keymap* "j k" 'lem-vi-mode/commands:vi-end-insert)
 
 ;; CL
 (define-key lem-lisp-mode:*lisp-mode-keymap* "Space e e" 'lem-lisp-mode:lisp-eval-last-expression)
