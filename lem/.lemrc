@@ -97,6 +97,12 @@
 (define-key lem-vi-mode:*normal-keymap* "q"  'quit-active-window)
 (define-key lem-vi-mode:*normal-keymap* "Space f f" 'lem:find-file)
 (define-key lem-vi-mode:*normal-keymap* "Space b b" 'lem:select-buffer)
+(define-key lem-vi-mode:*motion-keymap* "Space w h" 'lem:window-move-left)
+(define-key lem-vi-mode:*motion-keymap* "Space w l" 'lem:window-move-right)
+(define-key lem-vi-mode:*motion-keymap* "Space w k" 'lem:window-move-up)
+(define-key lem-vi-mode:*motion-keymap* "Space w j" 'lem:window-move-down)
+(define-key lem-vi-mode:*motion-keymap* "Space w s" 'lem:split-active-window-vertically)
+(define-key lem-vi-mode:*motion-keymap* "Space w v" 'lem:split-active-window-horizontally)
 ;; (define-key lem-vi-mode:*insert-keymap* "C-n" 'lem/abbrev:abbrev-with-pop-up-window)
 ;; (define-key lem-vi-mode:*insert-keymap* "j k" 'lem-vi-mode/commands:vi-end-insert)
 
