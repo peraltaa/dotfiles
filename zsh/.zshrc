@@ -33,7 +33,7 @@ export PATH="/Users/Angel/.qlot/bin:$PATH"
 source ~/.myvars.sh
 
 # Add color to terminal
-export TERM="xterm-color"
+# export TERM="xterm-color"
 PROMPT='%(?.%F{green}✓.%F{red}?%?)%f %F{yellow}%n%F{reset}@%F{green}%m:%F{blue}%~%f%b$ '
 # export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
 alias ls='ls -G'
