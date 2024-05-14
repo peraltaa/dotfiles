@@ -1,6 +1,6 @@
 ;; -*- mode:lisp -*-
 
-(in-package :lem-user)
+(use-package :lem-user)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Looks 
@@ -77,14 +77,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; VI
-(lem-vi-mode:vi-mode)
-
-;; PAREDIT
-;; (lem:add-hook lem:*find-file-hook*
-;;               (lambda (buffer)
-;;                 (when (eq (buffer-major-mode buffer) 'lem-lisp-mode:lisp-mode)
-;;                   (change-buffer-mode buffer 'lem-paredit-mode:paredit-mode t))))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -97,13 +89,18 @@
 (define-key lem-vi-mode:*normal-keymap* "q"  'quit-active-window)
 (define-key lem-vi-mode:*normal-keymap* "Space f f" 'lem:find-file)
 (define-key lem-vi-mode:*normal-keymap* "Space b b" 'lem:select-buffer)
-(define-key lem-vi-mode:*motion-keymap* "Space w h" 'lem:window-move-left)
-(define-key lem-vi-mode:*motion-keymap* "Space w l" 'lem:window-move-right)
-(define-key lem-vi-mode:*motion-keymap* "Space w k" 'lem:window-move-up)
-(define-key lem-vi-mode:*motion-keymap* "Space w j" 'lem:window-move-down)
-(define-key lem-vi-mode:*motion-keymap* "Space w c" 'lem:delete-active-window)
-(define-key lem-vi-mode:*motion-keymap* "Space w s" 'lem:split-active-window-vertically)
-(define-key lem-vi-mode:*motion-keymap* "Space w v" 'lem:split-active-window-horizontally)
+(define-key lem-vi-mode:*normal-keymap* "Space w h" 'lem:window-move-left)
+(define-key lem-vi-mode:*normal-keymap* "Space w l" 'lem:window-move-right)
+(define-key lem-vi-mode:*normal-keymap* "Space w k" 'lem:window-move-up)
+(define-key lem-vi-mode:*normal-keymap* "Space w j" 'lem:window-move-down)
+(define-key lem-vi-mode:*normal-keymap* "Space w c" 'lem:delete-active-window)
+(define-key lem-vi-mode:*normal-keymap* "Space w s" 'lem:split-active-window-vertically)
+(define-key lem-vi-mode:*normal-keymap* "Space w v" 'lem:split-active-window-horizontally)
+
+;; Start the Lisp REPL in vi insert mode. - Probably should create pull request for this
+(add-hook lem-lisp-mode:*lisp-repl-mode-hook* 'lem-vi-mode/commands:vi-insert)
+
+(lem-vi-mode:vi-mode)
 
 ;; CL
 (define-key lem-lisp-mode:*lisp-mode-keymap* "Space e e" 'lem-lisp-mode:lisp-eval-last-expression)
