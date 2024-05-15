@@ -10,6 +10,8 @@ function ln-sr() {
 }
 
 ln -s $(PWD)/lem/.lemrc $HOME/.lemrc
+ln -s $(PWD)/cl/.clrc.lisp $HOME/.clrc.lisp
+ln -s $(PWD)/sbcl/.sbclrc $HOME/.sbclrc
 ln -s $(PWD)/vim/.vimrc $HOME/.vimrc
 ln -s $(PWD)/vim/plugins.vim $HOME/.vim/plugins.vim
 ln -s $(PWD)/tmux/dev.tmux.conf $HOME/.tmux/
