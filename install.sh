@@ -4,7 +4,9 @@
 BASEDIR=$(dirname "$0")
 echo 'Installing dotfiles from '$BASEDIR
 # cd $1
-function ln-sr() {
+
+# Recursive soft lin
+function ln_s_r() {
    # FIXME: should check if symlink exists if not print warning and then attempt to link
    find $1 -type f -exec ln -s {} $2 \;
 }
@@ -16,10 +18,10 @@ ln -s $(PWD)/vim/.vimrc $HOME/.vimrc
 ln -s $(PWD)/vim/plugins.vim $HOME/.vim/plugins.vim
 ln -s $(PWD)/tmux/dev.tmux.conf $HOME/.tmux/
 ln -s $(PWD)/tmux/.tmux.conf $HOME/
-ln-sr $(PWD)/bash/ $HOME/
-ln-sr $(PWD)/zsh/ $HOME/
-ln-sr $(PWD)/doom/ $HOME/.doom.d
-ln-sr $(PWD)/lldb/ $HOME/
+ln_s_r $(PWD)/bash/ $HOME/
+ln_s_r $(PWD)/zsh/ $HOME/
+ln_s_r $(PWD)/doom/ $HOME/.config/doom/
+ln_s_r $(PWD)/lldb/ $HOME/
 
 # source $HOME/.vimrc
 # source $HOME/.tmux/dev.tmux.conf
