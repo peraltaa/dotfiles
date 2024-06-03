@@ -23,6 +23,18 @@ ln_s_r $(PWD)/zsh/ $HOME/
 ln_s_r $(PWD)/doom/ $HOME/.config/doom/
 ln_s_r $(PWD)/lldb/ $HOME/
 
+# Tools
+ln -s $(PWD)/tools/.dev.sh $HOME/.dev.sh
+ln -s $(PWD)/tools/.cl.sh $HOME/.cl.sh
+
+# ln_s_r $(PWD)/tools/ $HOME/.tools/
+
+# Operating System files
+if [[ "$OSTYPE" == "darwin"* ]]; then
+   ln -s $(PWD)/os/.macos.sh $HOME/.macos.sh
+   ln -s $(PWD)/tools/.xcode.sh $HOME/.xcode.sh
+fi
+
 # source $HOME/.vimrc
 # source $HOME/.tmux/dev.tmux.conf
 # source $HOME/.tmux.conf

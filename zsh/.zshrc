@@ -32,6 +32,15 @@ export PATH="/Users/Angel/.qlot/bin:$PATH"
 
 source ~/.myvars.sh
 
+# Find all .sh files in $HOME
+FILES_STR=$(find ~/ -type l -name "*.sh" -maxdepth 1)
+# 'tr' is a find-and-replace utility.
+# Outer () will convert the output of $() to array.
+FILES=($(echo $FILES_STR | tr '\n' ' '))
+for FILE in $FILES; do
+    source $FILE
+done
+
 # Add color to terminal
 # export TERM="xterm-color"
 PROMPT='%(?.%F{green}✓.%F{red}?%?)%f %F{yellow}%n%F{reset}@%F{green}%m:%F{blue}%~%f%b$ '
@@ -85,9 +94,6 @@ alias repos="cd $REPOS"
 alias gc='sh ~/dev/scripts/quickClone.sh' 
 alias vscode='open -a Visual\ Studio\ Code' 
 alias tkt='sh $REPOS/tools/ticket.sh' 
-
-# Quick compile for java
-alias qcjava='javac *.java'
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
