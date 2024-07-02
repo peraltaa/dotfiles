@@ -6,20 +6,6 @@
 ;; Looks 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; (define-color-theme "monokai" ()
-;;   (foreground "#eeeeee")
-;;   (background "#262626")
-;;   (cursor :foreground "#262626" :background "#eeeeee")
-;;   (syntax-warning-attribute :foreground "#87005f" :background "#262626")
-;;   (syntax-string-attribute :foreground "#d7d787" :background "#262626")
-;;   (syntax-comment-attribute :foreground "#666666" :background "#262626")
-;;   (syntax-keyword-attribute :foreground "#5fd7ff" :background "#262626")
-;;   (syntax-constant-attribute :foreground "#5fd7ff" :background "#262626")
-;;   (syntax-function-name-attribute :foreground "#afd700" :background "#262626")
-;;   (syntax-variable-attribute :foreground nil :background "#262626")
-;;   (syntax-type-attribute :foreground nil :background "#262626")
-;;   (syntax-builtin-attribute :foreground nil :background "#262626"))
-
 (define-color-theme "xcode" ()
   (:display-background-mode :light)
   (:foreground "#000000")
@@ -39,11 +25,10 @@
 
 (define-color-theme "xcode-dark" ("xcode")
   (:display-background-mode :dark)
-  (:foreground "#FFFFFF")
+  (:foreground "#ffffff")
   (:background "#202020")
-  (:inactive-window-background nil)
-  (cursor :foreground "#ffffff" :background "#000000")
-  (region :foreground nil :background "#FFFFFF")
+  (cursor :foreground "#202020" :background "#FFFFFF")
+  (region :foreground "#FFFFFF" :background "#343434")
   (modeline :bold t :background "#292929" :foreground "#1E2028")
   (modeline-inactive :bold t :background "#383838" :foreground "white")
   (lem-core::modeline-name-attribute :foreground "#5DD8FF")
