@@ -29,7 +29,7 @@
   (:background "#202020")
   (cursor :foreground "#202020" :background "#FFFFFF")
   (region :foreground "#FFFFFF" :background "#343434")
-  (modeline :bold t :background "#292929" :foreground "#1E2028")
+  (modeline :bold t :background "#292929" :foreground "#FFFFFF")
   (modeline-inactive :bold t :background "#383838" :foreground "white")
   (lem-core::modeline-name-attribute :foreground "#5DD8FF")
   (lem-core::inactive-modeline-name-attribute :foreground "#5d6dff")
