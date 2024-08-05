@@ -35,7 +35,6 @@ function updateDefaultsIfNeeded() {
 # Expand save panel by default
 updateDefaultsIfNeeded NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 updateDefaultsIfNeeded NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Expand print panel by default
 updateDefaultsIfNeeded NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
@@ -51,7 +50,6 @@ updateDefaultsIfNeeded com.apple.LaunchServices LSQuarantine -bool false
 updateDefaultsIfNeeded com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Change Location of Screenshots
-
 updateDefaultsIfNeeded com.apple.screencapture "location" -string "~/Pictures/Screenshots"
 
 

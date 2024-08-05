@@ -81,12 +81,12 @@ filetype plugin indent off
 syntax off
 
 " set rtp+=~/.vim/bundle/Vundle.vim
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 
 " Load plugins from Vim-Plug
-source ~/.vim/plugins.vim
+" source ~/.vim/plugins.vim
 
-call plug#end()
+" call plug#end()
 
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
@@ -195,7 +195,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme solarized
+" colorscheme solarized
 set background=dark
 
 " Set extra options when running in GUI mode

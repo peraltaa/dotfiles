@@ -1,3 +1,4 @@
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/Cellar/gcc/7.2.0/bin:${PATH}"
 export PATH="~/dev/flutter/bin:${PATH}"
 export PATH="/Users/AngelCortez/Library/Android/sdk/tools/bin:${PATH}"
@@ -93,7 +94,6 @@ alias freedom='cd ~/Documents/Work/Thanurus/Securties'
 alias repos="cd $REPOS"
 alias gc='sh ~/dev/scripts/quickClone.sh' 
 alias vscode='open -a Visual\ Studio\ Code' 
-alias tkt='sh $REPOS/tools/ticket.sh' 
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -119,3 +119,6 @@ export PATH="/usr/local/opt/node@14/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH="/usr/local/opt/node@14/bin:$PATH"
 export PATH="/usr/local/opt/node@16/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
